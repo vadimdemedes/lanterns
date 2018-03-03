@@ -28,7 +28,7 @@ mkdir documents
 
 Write the contents:
 
-```
+```markdown
 ---
 title: Hello World
 category: News
@@ -46,7 +46,7 @@ $ lanterns
 
 Execute GraphQL queries at `http://localhost:3000/graphql`:
 
-```
+```graphql
 {
 	query {
 		documents {
@@ -65,7 +65,7 @@ Execute GraphQL queries at `http://localhost:3000/graphql`:
 
 Document represents a single Markdown file in the file system.
 
-```
+```graphql
 type Document {
 	# Title extracted from frontmatter's `title`
 	title: String!
@@ -90,7 +90,7 @@ Query documents with optional pagination parameters `skip` and `limit`.
 
 Example:
 
-```
+```graphql
 {
 	query {
 		documents {
@@ -112,7 +112,7 @@ Query a single document by its slug.
 
 Example:
 
-```
+```graphql
 {
 	query {
 		document(slug: "hello-world") {
