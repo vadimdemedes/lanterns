@@ -14,8 +14,6 @@ type Document {
 	body: String!
 	# Date when a document was created
 	createdAt: Date!
-	# Date when a document was last updated
-	updatedAt: Date!
 }
 
 type Query {

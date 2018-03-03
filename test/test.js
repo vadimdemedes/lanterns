@@ -142,7 +142,6 @@ test('fetch document by slug', async t => {
 					frontmatter
 					body
 					createdAt
-					updatedAt
 				}
 			}
 		`
@@ -157,8 +156,7 @@ test('fetch document by slug', async t => {
 			category: 'Announcements'
 		},
 		body: 'Second body',
-		createdAt: stat.birthtime.toISOString(),
-		updatedAt: stat.mtime.toISOString()
+		createdAt: stat.birthtime.toISOString()
 	});
 });
 
