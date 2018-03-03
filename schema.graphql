@@ -1,0 +1,29 @@
+scalar Date
+scalar JSON
+
+type Document {
+	# Title extracted from frontmatter's `title`
+	title: String!
+	# Title converted to a slug
+	slug: String!
+	# Category extracted from frontmatter's `category`
+	category: String
+	# All frontmatter fields
+	frontmatter: JSON!
+	# Document body without frontmatter
+	body: String!
+	# Date when a document was created
+	createdAt: Date!
+	# Date when a document was last updated
+	updatedAt: Date!
+}
+
+type Query {
+	documents(skip: Int, limit: Int): [Document!]!
+	document(slug: String!): Document
+	categories: [String!]
+}
+
+schema {
+	query: Query
+}

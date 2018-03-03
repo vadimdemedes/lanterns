@@ -1,0 +1,72 @@
+{
+	"name": "lanterns",
+	"version": "0.0.0",
+	"description": "Write Markdown and get a GraphQL API for querying them for free",
+	"license": "MIT",
+	"repository": "vadimdemedes/lanterns",
+	"author": {
+		"name": "Vadim Demedes",
+		"email": "vdemedes@gmail.com",
+		"url": "github.com/vadimdemedes"
+	},
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js",
+		"cli.js",
+		"resolvers",
+		"scalars",
+		"lib"
+	],
+	"keywords": [
+		"markdown",
+		"md",
+		"api",
+		"graphql",
+		"contentful",
+		"headless"
+	],
+	"dependencies": {
+		"apollo-server-micro": "^1.3.2",
+		"chalk": "^2.3.2",
+		"figures": "^2.0.0",
+		"front-matter": "^2.3.0",
+		"graphql": "^0.13.1",
+		"graphql-tools": "^2.21.0",
+		"graphql-type-json": "^0.2.0",
+		"mem": "^3.0.0",
+		"meow": "^3.7.0",
+		"micro": "^9.1.0",
+		"p-map": "^1.2.0",
+		"pify": "^3.0.0",
+		"slugg": "^1.2.1",
+		"sort-by": "^1.2.0"
+	},
+	"devDependencies": {
+		"ava": "^0.20.0",
+		"graphql-got": "^0.1.1",
+		"test-listen": "^1.1.0",
+		"xo": "^0.18.2"
+	},
+	"xo": {
+		"overrides": [
+			{
+				"files": "resolvers/*.js",
+				"rules": {
+					"unicorn/filename-case": 0
+				}
+			},
+			{
+				"files": "scalars/*.js",
+				"rules": {
+					"unicorn/filename-case": 0
+				}
+			}
+		]
+	}
+}
