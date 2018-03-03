@@ -1,10 +1,10 @@
-<h1 align="center">
+<p align="center">
 	<br>
 	<img width="200" src="media/logo.png" alt="Lanterns">
 	<br>
 	<br>
 	<br>
-</h1>
+</p>
 
 # Lanterns [![Build Status](https://travis-ci.org/vadimdemedes/lanterns.svg?branch=master)](https://travis-ci.org/vadimdemedes/lanterns)
 
