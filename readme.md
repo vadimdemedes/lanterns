@@ -26,7 +26,7 @@ Create a folder for storing your Markdown files and name it `documents`:
 mkdir documents
 ```
 
-Write the contents:
+Create a file and name it according to `[year]-[month]-[day]-[slug]` format, then write the contents:
 
 ```markdown
 ---
