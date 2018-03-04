@@ -10,6 +10,8 @@
 
 > Write Markdown and get a GraphQL API for querying them for free
 
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/vadimdemedes/lanterns)
+
 
 ## Install
 
