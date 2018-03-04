@@ -1,6 +1,6 @@
 {
 	"name": "lanterns",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Write Markdown and get a GraphQL API for querying them for free",
 	"license": "MIT",
 	"repository": "vadimdemedes/lanterns",
