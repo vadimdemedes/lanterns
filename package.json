@@ -14,6 +14,7 @@
 		"node": ">=8"
 	},
 	"scripts": {
+		"start": "./cli.js",
 		"test": "xo && ava"
 	},
 	"files": [
@@ -21,7 +22,8 @@
 		"cli.js",
 		"resolvers",
 		"scalars",
-		"lib"
+		"lib",
+		"schema.graphql"
 	],
 	"keywords": [
 		"markdown",
