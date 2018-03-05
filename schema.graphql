@@ -17,7 +17,7 @@ type Document {
 }
 
 type Query {
-	documents(skip: Int, limit: Int): [Document!]!
+	documents(skip: Int, limit: Int, category: String): [Document!]!
 	document(slug: String!): Document
 	categories: [String!]
 	# Return all documents of category `name`.
