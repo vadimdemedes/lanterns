@@ -31,3 +31,8 @@ exports.categories = async (root, params, {store}) => {
 
 	return [...uniqueCategories];
 };
+
+exports.category = async (root, {name}, {store}) => {
+	const docs = await store.getDocuments();
+	return docs.filter(doc => doc.frontmatter.category === name);
+};

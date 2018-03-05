@@ -176,3 +176,33 @@ test('fetch categories', async t => {
 
 	t.deepEqual(body.categories, ['Announcements', 'News']);
 });
+
+test('fetch documents by category', async t => {
+	const server = await listen(createServer(documentsPath));
+	const {body} = await graphqlGot(server, {
+		query: `
+				query {
+					category(name: "News") {
+						title
+					}
+				}
+			`
+	});
+
+	t.deepEqual(body.category, [{title: 'First'}]);
+});
+
+test('fetch documents with missing category', async t => {
+	const server = await listen(createServer(documentsPath));
+	const {body} = await graphqlGot(server, {
+		query: `
+				query {
+					category(name: "Missing") {
+						title
+					}
+				}
+			`
+	});
+
+	t.deepEqual(body.category, []);
+});
