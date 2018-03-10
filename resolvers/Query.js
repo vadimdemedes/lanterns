@@ -3,8 +3,11 @@ const slugify = require('slugg');
 
 const DEFAULT_LIMIT = 10;
 
-exports.documents = async (root, {skip, limit}, {store}) => {
-	const docs = await store.getDocuments();
+exports.documents = async (root, {skip, limit, category}, {store}) => {
+	let docs = await store.getDocuments();
+	if (category) {
+		docs = docs.filter(doc => doc.frontmatter.category === category);
+	}
 
 	if (typeof skip === 'number') {
 		return docs.slice(skip, limit || DEFAULT_LIMIT);
