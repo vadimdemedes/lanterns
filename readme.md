@@ -86,9 +86,10 @@ type Document {
 }
 ```
 
-#### documents(skip: Int, limit: Int)
+#### documents(skip: Int, limit: Int, category: String)
 
 Query documents with optional pagination parameters `skip` and `limit`.
+There's an optional `category` parameter to filter posts by their category.
 
 Example:
 
